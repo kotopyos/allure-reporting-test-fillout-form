@@ -1,19 +1,16 @@
 package tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 
 public class Tests extends TestBase {
     @Test
-    @Issue("Penis bug")
+    @Issue("Issue link")
     @Feature("User info form")
     @Story("Filling out user form")
-    @Owner("katapyos")
+    @Owner("staya_kotyat")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value="Form", url="https://demoqa.com/automation-practice-form")
     @DisplayName("Filling out form with valid data")
