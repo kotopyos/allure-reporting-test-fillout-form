@@ -10,7 +10,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.RegistrationPage;
 
-import java.net.URI;
 import java.util.Map;
 
 
