@@ -9,12 +9,10 @@ import org.junit.jupiter.api.Test;
 public class Tests extends TestBase {
     @Test
     @Tag("remote")
-    @Issue("Issue link")
     @Feature("User info form")
     @Story("Filling out user form")
     @Owner("staya_kotyat")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value="Form", url="https://demoqa.com/automation-practice-form")
     @DisplayName("Filling out form with valid data")
     void fillOutForm() {
 
