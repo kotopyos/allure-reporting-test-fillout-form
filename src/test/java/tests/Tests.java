@@ -2,11 +2,13 @@ package tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 
 public class Tests extends TestBase {
     @Test
+    @Tag("remote")
     @Issue("Issue link")
     @Feature("User info form")
     @Story("Filling out user form")
