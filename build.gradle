@@ -3,8 +3,7 @@ plugins {
     id 'io.qameta.allure' version '2.11.2'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+
 
 allure {
     report {
@@ -36,9 +35,20 @@ dependencies {
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.9.0')
 }
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+
 }
 
 task remote_test(type: Test) {
