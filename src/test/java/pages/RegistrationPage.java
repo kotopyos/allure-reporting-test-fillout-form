@@ -8,6 +8,7 @@ import pages.components.RegistrationResultsModal;
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.timeout;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -113,6 +114,7 @@ public class RegistrationPage {
     @Step("Set State: {state}")
     public RegistrationPage setState(String state){
         stateField.click();
+
         $(byText(state)).click();
 
         return this;

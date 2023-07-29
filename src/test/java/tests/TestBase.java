@@ -16,13 +16,14 @@ import java.util.Map;
 public class TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
     TestData data = new TestData();
+    public static String defaultRemoteServerBaseUrl = "http://95.216.214.178:8080/";
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browser_version", "108.0");
-       Configuration.remote = "http://95.216.214.178:8080/wd/hub";
+        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
+        Configuration.remote = System.getProperty("remote", defaultRemoteServerBaseUrl + "wd/hub");
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub"; // not available from jenkins
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
